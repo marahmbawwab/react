@@ -10,11 +10,21 @@ class Myform extends React.Component {
     this.handleuser=this.handleuser.bind(this);
   }
   handleuser(event){
+    if(event.target.value !== ""){
       this.setState({username:event.target.value});
+    }
+    else {
+      this.setState({username:null});
+    }
   }
  handlepass=(event)=>{
    //if(event.target.name==="myuser"){
+    if(event.target.value !== ""){
      this.setState({password:event.target.value});
+    }
+    else {
+      this.setState({password:null});
+    }
  }
   handleClick=()=>{
     var str1 = "User Name:" + this.state.username ;
